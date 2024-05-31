@@ -3,3 +3,47 @@
     margin: 0;
     box-sizing: border-box;
 }
+div.app-container{
+    width: 1500px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+}
+aside.users{
+    width: 300px;
+    height: 100vh;
+    background-color: aquamarine;
+}
+.margin-right{
+    margin-right: 1rem;
+}
+
+main.active-chat{
+    width: calc(100% - 300px);
+    height: 100vh;
+    background-color: burlywood;
+}
+
+header.aside-head{
+    background-color: #eaeaea;
+    justify-content: space-between;
+    padding: 1rem;
+}
+div.notice{
+    background-color: #8edafc;
+    padding: 1rem;
+    margin-bottom: .25rem;
+}
+.nav-chat div > input{
+    width: 95%;
+    padding: 0.5rem;
+
+}
+div.navbar-head{
+    justify-content: center;
+}
+
+section.user-chat{
+    padding: 1rem;
+}
