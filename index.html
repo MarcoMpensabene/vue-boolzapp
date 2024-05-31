@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- Vue3-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- FontAWS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div id="app">
@@ -19,9 +21,9 @@
                         <h2>Sofia</h2>
                     </div>
                     <div class="icons flex">
-                        <i>&hearts;</i>
-                        <i>&hearts;</i>
-                        <i>&hearts;</i>
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </header>
 
@@ -47,22 +49,37 @@
                         <h2>Nome</h2>
                         <p>Last MsG</p>
                     </div>
-
                     
                 </section>
             </aside>
             
             <main class="active-chat">
-                <header class="main-header">
-
+                <header class="main-header flex">
+                    <section class="flex">
+                        <div class="margin-right">
+                            <img src="" alt="tizio2"> 
+                        </div>
+                        <div>
+                            <h2>Nome</h2>
+                            <p>Last MsG</p>
+                        </div>
+                    </section>
+                    <div class="icons flex">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                
                 </header>
 
                 <section class="main-chat">
-
+                    <h1>TEST</h1>
                 </section>
 
-                <footer>
-
+                <footer class="flex">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input type="text" placeholder="Search">
+                    <i class="fa-solid fa-microphone"></i>
                 </footer>
             </main>
         </div>
