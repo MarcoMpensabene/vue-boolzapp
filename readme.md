@@ -20,3 +20,7 @@ Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati
 Milestone 5 - opzionale
 Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
 
+
+Milestone 1 :
+1) Replicare il layout assegnatoci tramite css e html . note:Crea due classi css che identifichino messaggio dell'utente e dell'interlocutore 
+2) Per visualizzare la lista dataci assegniamo scriviamo il nostro v-for(array , index) all'interno del contenitore per poi gestirci e posizionarci gli elementi 
