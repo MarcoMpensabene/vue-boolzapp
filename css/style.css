@@ -82,6 +82,8 @@ section.main-chat{
     background-image: url(../img/mine.jpg);
     height: calc(100% - 70px);
     overflow: auto;
+    flex-direction: column;
+    padding-top: 120px;
 }
 main footer{
     height: 70px;
@@ -118,4 +120,24 @@ div.icons i{
 p{
     font-size: small;
     color: #bec0c6;
+}
+
+.user-msg{
+    background-color: #d5f9ba;
+    width: calc(50% - 3rem);
+    align-self: end;
+    border-radius: 2rem;
+    margin-right: 3rem;
+    padding: 1rem;
+    vertical-align: middle;
+}
+.interlocutor-msg{
+    background-color: #ffffff;
+    width: calc(50% - 3rem);
+    align-self: start;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin-left: 3rem;
+    vertical-align: middle;
+    
 }
