@@ -7,30 +7,38 @@ body{
     background-color: antiquewhite;
     font-family: "Lato", sans-serif;;
 }
+
+
 div.app-container{
-    width: 1500px;
+    padding-top: 30px;
+    max-width: 1300px;
     margin: 0 auto;
+    max-height: 1200px;
 }
 .flex{
     display: flex;
 }
-
+a{
+    font-size: small;
+    color: #5c98bb;
+    text-decoration: underline;
+}
 img{
-    width: 12.5%;
+    width: 40px;
     border-radius: 50%;
 }
 aside.users{
-    width: 500px;
-    height: 100vh;
+    width: 400px;
     background-color: #ffffff;
+    height: 900px;
 }
 .margin-right{
     margin-right: 1rem;
 }
 
 main.active-chat{
-    width: calc(100% - 500px);
-    height: 100vh;
+    width: calc(100% - 400px);
+    max-height: 900px;
     background-color: burlywood;
 }
 
@@ -38,6 +46,7 @@ header.aside-head{
     background-color: #eaeaea;
     justify-content: space-between;
     padding: 1rem;
+    height: 70px;
 }
 div.notice{
     background-color: #8edafc;
@@ -47,6 +56,7 @@ div.notice{
 .nav-chat div > input{
     width: 95%;
     padding: 0.5rem;
+    border-radius: 0.5rem;
 
 }
 div.navbar-head{
@@ -63,14 +73,22 @@ main header.main-header{
     justify-content: space-between;
     padding: 1rem;
     background-color: #eaeaea;
+    height: 70px;
+    width: 900px;
+    position: fixed;
 
 }
 section.main-chat{
     background-image: url(../img/mine.jpg);
+    height: calc(100% - 70px);
+    overflow: auto;
 }
 main footer{
-    width: 100%;
+    height: 70px;
     justify-content: space-between;
+    width: 900px;
+    position: fixed;
+
 }
 footer > input{
     width: 90%;
@@ -79,6 +97,7 @@ footer > input{
 footer{
     padding: 1rem;
     background-color: #f3eeea;
+    width: calc(100% - 400px);
 }
 footer > i {
     font-size: 30px;
@@ -96,7 +115,7 @@ div.icons i{
     border-radius: 50%;
 }
 
-section.user-chat  p{
+p{
     font-size: small;
     color: #bec0c6;
 }
