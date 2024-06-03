@@ -33,7 +33,7 @@
 
                 <section class="nav-chat">
                     <div class="notice flex">
-                        <img src="./img/bell.png" alt="">
+                        <img src="./img/bell.png" alt="" class="margin-right">
                         <div>
                             <p>Ricevi notifiche di nuovi messaggi </p>
                             <a href="#">Attiva notifiche desktop </a>
@@ -45,9 +45,9 @@
                     
                 </section>
 
-                <section class="user-chat flex" v-for="(item , index) in contacts">
-                    <div class="flex">
-                        <img :src="item.avatar" alt="tizio2"> 
+                <section class="user-chat flex" v-for="(item , index) in contacts" >
+                    <div class="flex" @click="getMsg">
+                        <img :src="item.avatar" alt="tizio2" class="margin-right"> 
                         <div class="message">
                             <h3>{{item.name}}</h3>
                             <p>Ultimo messaggio inviato</p>
@@ -60,7 +60,7 @@
             <main class="active-chat">
                 <header class="main-header flex">
                     <section class="flex">
-                        <img src="./img/avatar_1.jpg" alt="tizio2"> 
+                        <img src="./img/avatar_1.jpg" alt="tizio2" class="margin-right"> 
                         <div>
                             <h3>Michele</h3>
                             <p>Ultimo accesso oggi alle 12:00</p>
@@ -73,12 +73,10 @@
                     </div>
                 </header>
 
-                <section class="main-chat flex">
-                    <div class="user-msg">
-                       USER
-                    </div>
-                    <div class="interlocutor-msg">
-                       INTERLOCUTORE
+                <section class="main-chat" v-for="(item, index) in contacts">
+                    <div class="flex" v-for="(object , index) in item.messages">
+                        <div v-if="object.status === 'sent'" class="user-msg">{{object.message}}</div>
+                        <div v-else class="interlocutor-msg">{{object.message}}</div>
                     </div>
                 </section>
 
@@ -86,8 +84,6 @@
                     <i class="fa-regular fa-face-smile"></i>
                     <input type="text" placeholder="Search">
                     <i class="fa-solid fa-microphone"></i>
-                    
-                    
                 </footer>
             </main>
         </div>

@@ -4,16 +4,19 @@
     box-sizing: border-box;
 }
 body{
-    background-color: antiquewhite;
-    font-family: "Lato", sans-serif;;
+    font-family: "Lato", sans-serif;
+    background: linear-gradient(to bottom,
+    #009688 0px,
+    #009688 15%,
+    #dadbd4 15%,
+    #dadbd4 100%);
 }
 
 
 div.app-container{
     padding-top: 30px;
-    max-width: 1300px;
+    width: 1300px;
     margin: 0 auto;
-    max-height: 1200px;
 }
 .flex{
     display: flex;
@@ -31,6 +34,8 @@ aside.users{
     width: 400px;
     background-color: #ffffff;
     height: 900px;
+    overflow-y: auto;
+
 }
 .margin-right{
     margin-right: 1rem;
@@ -38,7 +43,7 @@ aside.users{
 
 main.active-chat{
     width: calc(100% - 400px);
-    max-height: 900px;
+    height: 900px;
     background-color: burlywood;
 }
 
@@ -69,6 +74,7 @@ section.user-chat{
     justify-content: space-between;
 }
 
+
 main header.main-header{
     justify-content: space-between;
     padding: 1rem;
@@ -82,8 +88,11 @@ section.main-chat{
     background-image: url(../img/mine.jpg);
     height: calc(100% - 70px);
     overflow: auto;
-    flex-direction: column;
     padding-top: 120px;
+
+}
+section.main-chat div.flex{
+    flex-direction: column;
 }
 main footer{
     height: 70px;
@@ -124,20 +133,23 @@ p{
 
 .user-msg{
     background-color: #d5f9ba;
-    width: calc(50% - 3rem);
+    max-width: calc(50% - 3rem);
     align-self: end;
     border-radius: 2rem;
     margin-right: 3rem;
     padding: 1rem;
     vertical-align: middle;
+    margin-bottom: 1rem;
+    font-size: .8rem;
 }
 .interlocutor-msg{
     background-color: #ffffff;
-    width: calc(50% - 3rem);
+    max-width: calc(50% - 3rem);
     align-self: start;
     border-radius: 2rem;
     padding: 1rem;
     margin-left: 3rem;
     vertical-align: middle;
-    
+    margin-bottom: 1rem;
+    font-size: .8rem;
 }
