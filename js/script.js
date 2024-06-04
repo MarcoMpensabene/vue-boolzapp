@@ -6,6 +6,7 @@ createApp({
             selectedContact: null,
             selectedMessage: null,
             newMessage : "",
+            searchInput : "" ,
             contacts: [
                 {
                     name: 'Michele',
@@ -193,6 +194,11 @@ createApp({
                         });
                     }, 1000);
                 }
+            },
+            filterContacts() {
+                return this.contacts.filter(function(contact) {
+                    return contact.name.toLowerCase().includes(this.searchInput.toLowerCase())
+                })
             }
                 
         },
