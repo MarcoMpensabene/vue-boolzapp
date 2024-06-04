@@ -133,7 +133,7 @@ p{
 
 .user-msg{
     background-color: #d5f9ba;
-    max-width: calc(50% - 3rem);
+    width:  300px;
     align-self: end;
     border-radius: 2rem;
     margin-right: 3rem;
@@ -144,7 +144,7 @@ p{
 }
 .interlocutor-msg{
     background-color: #ffffff;
-    max-width: calc(50% - 3rem);
+    width: 300px;
     align-self: start;
     border-radius: 2rem;
     padding: 1rem;
@@ -152,4 +152,9 @@ p{
     vertical-align: middle;
     margin-bottom: 1rem;
     font-size: .8rem;
+}
+strong{
+    align-self: end;
+    font-size: 10px;
+    color: #cfd0d4;
 }

@@ -45,8 +45,8 @@
                     
                 </section>
 
-                <section class="user-chat flex" v-for="(item , index) in contacts" >
-                    <div class="flex" @click="getMsg">
+                <section class="user-chat flex" v-for="(item , index) in contacts" @click="selectContact(index)">
+                    <div class="flex" >
                         <img :src="item.avatar" alt="tizio2" class="margin-right"> 
                         <div class="message">
                             <h3>{{item.name}}</h3>
@@ -73,16 +73,24 @@
                     </div>
                 </header>
 
-                <section class="main-chat" v-for="(item, index) in contacts">
-                    <div class="flex" v-for="(object , index) in item.messages">
-                        <div v-if="object.status === 'sent'" class="user-msg">{{object.message}}</div>
-                        <div v-else class="interlocutor-msg">{{object.message}}</div>
+                <section class="main-chat">
+                    <div v-if="selectedContact">
+                        <div v-for="message in selectedContact.messages" :key="message.id" class="flex">
+                            <div v-if="message.status === 'sent'" class="user-msg flex">
+                                <span>{{ message.message }}</span>
+                                <strong>{{ message.date }}</strong>
+                            </div>
+                            <div v-else-if="message.status === 'received'" class="interlocutor-msg flex">
+                                    <span>{{ message.message }}</span>
+                                    <strong>{{ message.date }}</strong>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                 <footer class="flex">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" placeholder="Search">
+                    <input type="text"   v-model="newMessage" placeholder="Search" @keyup.enter="sendMessage">
                     <i class="fa-solid fa-microphone"></i>
                 </footer>
             </main>
