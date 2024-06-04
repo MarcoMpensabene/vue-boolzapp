@@ -184,6 +184,14 @@ createApp({
                         status: "sent",
                     });
                     this.newMessage = "";
+                    // ! aggiunto risposta con timer 
+                    setTimeout(() => {
+                        this.selectedContact.messages.push({
+                            date: new Date().toLocaleString(),
+                            message: "Ok",
+                            status: "received",
+                        });
+                    }, 1000);
                 }
             }
                 
