@@ -176,17 +176,16 @@ createApp({
                 this.selectedContact = this.contacts[index];
             },
             sendMessage(){
-                this.contacts.forEach(contact =>{
-                    if (this.selectedContact) {
-                        this.selectedContact.messages.push({
-                            date: new Date().toLocaleString(),
-                            message: this.newMessage,
-                            status: "sent",
-                        });
-                        this.newMessage = "";
-                    }
-                })
-            },
+                if (this.selectedContact) 
+                {
+                    this.selectedContact.messages.push({
+                        date: new Date().toLocaleString(),
+                        message: this.newMessage,
+                        status: "sent",
+                    });
+                    this.newMessage = "";
+                }
+            }
                 
         },
 }).mount('#app')
