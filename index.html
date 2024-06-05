@@ -32,7 +32,7 @@
                 </header>
 
                 <section class="nav-chat">
-                    <div class="notice flex">
+                    <div class="notice flex" >
                         <img src="./img/bell.png" alt="" class="margin-right">
                         <div>
                             <p>Ricevi notifiche di nuovi messaggi </p>
@@ -46,7 +46,7 @@
                 </section>
 
                 <section class="user-chat flex" v-for="(item , index) in contacts" @click="selectContact(index)">
-                    <div class="flex" >
+                    <div class="flex">
                         <img :src="item.avatar" alt="tizio2" class="margin-right"> 
                         <div class="message">
                             <h3>{{item.name}}</h3>
@@ -58,11 +58,11 @@
             </aside>
             
             <main class="active-chat">
-                <header class="main-header flex">
-                    <section class="flex">
-                        <img src="./img/avatar_1.jpg" alt="tizio2" class="margin-right"> 
+                <header class="main-header flex" >
+                    <section class="flex" v-if="selectedContact">
+                        <img :src="selectedContact.avatar" alt="tizio2" class="margin-right"> 
                         <div>
-                            <h3>Michele</h3>
+                            <h3>{{selectedContact.name}}</h3>
                             <p>Ultimo accesso oggi alle 12:00</p>
                         </div>
                     </section>
@@ -75,7 +75,7 @@
 
                 <section class="main-chat">
                     <div v-if="selectedContact">
-                        <div v-for="message in selectedContact.messages" :key="message.id" class="flex">
+                        <div v-for="message in selectedContact.messages" class="flex">
                             <div v-if="message.status === 'sent'" class="user-msg flex">
                                 <span>{{ message.message }}</span>
                                 <strong>{{ message.date }}</strong>
